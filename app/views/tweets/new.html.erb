@@ -1,0 +1,16 @@
+<h1>New Tweet</h1>
+
+<%= render 'form', tweet: @tweet %>
+
+<%= link_to 'Back', tweets_path %>
+
+
+<div class="form-group">
+  <%= form.text_field :message, placeholder: "What's happening?", class: "form-control" %>
+</div>
+<div class="field">
+  <%= form.hidden_field :user_id, value: current_user.id %>
+</div>
+<div class="form-group">
+  <%= form.submit "Tweet It!", class: "btn btn-primary" %>
+</div>
